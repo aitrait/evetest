@@ -26,7 +26,7 @@ class Order(db.Model):
 
 @event.listens_for(Order.status, 'set')
 def on_order_status_change(target, value, oldvalue, initiator):
-    if value != oldvalue:
+    if target.id and (value != oldvalue):
         log_order_status(target.id, value)
 
 class OrderItem(db.Model):
