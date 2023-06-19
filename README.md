@@ -1,3 +1,5 @@
+# EVEREST TEST TASK
+
 - создать каталог товара с характеристиками: цвет, вес, цена;
 URL: /admin/product/
 
@@ -17,6 +19,7 @@ URL: /admin/
 URL: /api/
 Данные для авторизации admin@admin.com:admin (хранится в .env)
 Тело запроса:
+```
   {
     "jsonrpc": "2.0",
     "method": "order.get_order_info",
@@ -25,3 +28,4 @@ URL: /api/
     },
     "id": 1
   }
+```
